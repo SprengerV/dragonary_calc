@@ -1,9 +1,13 @@
-const { Dragon } = require('./lib/classes/Dragon');
+const { Dragon, Breed, BreedCycle } = require('./lib/classes'); 
 
-const saezio = new Dragon('saezio', 20, 20, 20, 1);
+const BlazeUtiss = new Dragon('Blaze Utiss', 8, 7, 15, 0);
+const SirrushDutag = new Dragon('Sirrush Dutag', 12, 8, 10);
+const ChoryrthFinola = new Dragon('Choryrth Finola', 7, 14, 9)
 
-console.log('1: ' + saezio.bred);
-console.log('cost1: ' + saezio.breedCost);
-saezio.breed();
-console.log('2: ' + saezio.bred);
-console.log('cost2: ' + saezio.breedCost);
+console.log(BlazeUtiss.name);
+
+console.log(BlazeUtiss.bred);
+const breed = new Breed(BlazeUtiss, SirrushDutag);
+console.log(breed.dragons);
+console.log(breed.result);
+console.log('BUb: ' + BlazeUtiss.bred + '\nSDb: ' + SirrushDutag.bred);
